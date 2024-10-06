@@ -1,0 +1,154 @@
+.connection {
+  padding-right: 40px;
+  margin-bottom: 100px;
+  &__start {
+    border-radius: 16px;
+    background-image: url("../../assets/images/connection-img.png"), radial-gradient(
+      333.17% 80.94% at 51.32% 69.21%,
+      #3da0fc 0%,
+      rgba(2, 227, 214, 0.2) 100%
+    );
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 30px 20px;
+    padding-left: 200px;
+    gap: 30px;
+  }
+  &__form {
+    padding: 50px;
+    padding-top: 10px;
+    background-color: #fff;
+    // width: 30%;
+    width: 400px;
+    border-radius: 20px;
+    &-title {
+      color: #242825;
+      font-size: 32px;
+    }
+    input {
+      width: 100%;
+      margin-bottom: 20px;
+      background-color: #e4e4e4;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    &-btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: rgb(0, 0, 0);
+      color: #fff;
+      border-radius: 5px;
+    }
+  }
+}
+.modal {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 80px;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  right: 0;
+  // bottom: 0;
+  z-index: 93;
+  border-radius: 20px;
+  &__text {
+    color: #000000;
+    font-size: 25px;
+  }
+  &__btn {
+    background-color: red;
+    padding: 15px 80px;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+  }
+  &__black {
+    position: fixed;
+    background-color: #000000;
+    transition: .3s;
+    z-index: 30;
+    left: 0px;
+    bottom: 0;
+    top:0px;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+  }
+}
+@media only screen and (max-width: 1070px)  {
+  .connection{
+    &__start {
+      padding: 30px 20px;
+    }
+  }
+}
+@media only screen and (max-width: 700px)  {
+  .modal {
+    left: 10%;
+    &__text {
+      color: #000000;
+      font-size: 20px;
+    }
+  }
+}
+@media only screen and (max-width: 600px)  {
+  .connection{
+    &__form {
+      width: 70%;
+    }
+  }
+}
+@media only screen and (max-width: 500px)  {
+  .connection{
+    &__form {
+      width: 90%;
+      padding: 10px;
+      &-title{
+        font-size: 24px;
+      }
+      input {
+        width: 90%;
+      }
+    }
+  }
+  .modal {
+    left: 2%;
+    right: 0;
+    width: 57%;
+  }
+}
+@media only screen and (max-width: 400px)  {
+  .modal {
+    max-width: 50%;
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
+@media only screen and (max-width: 350px)  {
+  .connection{
+    &__form {
+      &-title{
+        font-size: 16px;
+      }
+    }
+  }
+  .modal {
+    max-width: 45%;
+    &__btn {
+      padding: 15px 30px;
+      font-size: 12px;
+    }
+    &__text {
+      font-size: 12px;
+    }
+  }
+}
