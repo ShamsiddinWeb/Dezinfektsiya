@@ -70,6 +70,7 @@ function Header(props) {
             >
               <option value="uz">Uzbek</option>
               <option value="ru">Русский</option>
+              <option value="eng">English</option>
             </select>
             <div className="header__menu-burgers">
               <button
