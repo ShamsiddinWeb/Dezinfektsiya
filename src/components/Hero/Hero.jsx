@@ -12,7 +12,7 @@ const Hero = (props) => {
     });
   }, []);
   return (
-    <section className="hero" id={props}>
+    <section className="hero" id="main">
       <div className="container">
         <div className="hero__start ">
           <div className="hero__left">
@@ -26,7 +26,7 @@ const Hero = (props) => {
                 width={300}
               />
             </div>
-            <button className="hero__left-btn" data-aos="fade-right">{props.t("bog'lanish")}</button>
+            <a href="#link" className="hero__left-btn">{props.t("bog'lanish")}</a>
           </div>
           <img
             className="hero__right-img"

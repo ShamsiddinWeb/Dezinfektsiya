@@ -18,12 +18,12 @@ function Header(props) {
     },
     {
       id: 3,
-      link: "/",
+      link: "#Services",
       title: props.t("xizmatlar"),
     },
     {
       id: 4,
-      link: "/",
+      link: "#faq",
       title: props.t("faq"),
     },
   ];
@@ -33,15 +33,15 @@ function Header(props) {
       onClick={() => setToggle(!toogle)}
       className="header__list-item"
     >
-      <Link to={e.link} className="header__list-link">
+      <a href={e.link} className="header__list-link">
         {e.title}
-      </Link>
+      </a>
     </li>
   ));
 
   const [toogle, setToggle] = useState(false);
   return (
-    <header className={`header ${toogle ? "open" : ""}`} >
+    <header className={`header ${toogle ? "open" : ""}`}>
       <div className="container">
         <div
           class="header__active dark_div"
@@ -59,7 +59,7 @@ function Header(props) {
           <div className="header__right">
             <div className="header__card">
               <ul className="header__list">{headerList}</ul>
-              <button className="header__btn2">{props.t("bog'lanish")}</button>
+              <a href="#link" className="header__btn2"  onClick={() => setToggle(!toogle)}>{props.t("bog'lanish")}</a>
             </div>
             <select
               className="header__select"
@@ -83,7 +83,7 @@ function Header(props) {
                 <span className="header__menu-span"></span>
               </button>
             </div>
-            <button className="header__btn">{props.t("bog'lanish")}</button>
+            <a href="#link" className="header__btn">{props.t("bog'lanish")}</a>
           </div>
         </div>
       </div>

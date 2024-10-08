@@ -23,9 +23,7 @@ const Official = (props) => {
             <h3 className="offical__card-title" data-aos="fade-right">
               {props.t("offical__title")}
             </h3>
-            <button className='offical__card-btn' data-aos="fade-right">
-              {props.t("bog'lanish")}
-            </button>
+            <a href="#link" className='offical__card-btn' data-aos="fade-right">{props.t("bog'lanish")}</a>
           </div>
         </div>
       </div>

@@ -53,9 +53,7 @@ const ServiceType = (props) => {
       <h3 className="serviceType__list-title">{e.title}</h3>
       <p className="serviceType__list-text">{e.text}</p>
       <div className="serviceType__list-card">
-        <button className="serviceType__list-btn">
-          {props.t("bog'lanish")}
-        </button>
+        <a href="#link" className="serviceType__list-btn">{props.t("bog'lanish")}</a>
         <img className="serviceType__list-img" src={e.imges} alt="" />
       </div>
     </li>

@@ -21,9 +21,7 @@ const Clean = (props) => {
           <p className="clean__start-text" data-aos="fade-right">
             {props.t("clean__text")}
           </p>
-          <button className="clean__start-btn" data-aos="fade-right">
-            {props.t("bog'lanish")}{" "}
-          </button>
+          <a href="#link" className="clean__start-btn" data-aos="fade-right">{props.t("bog'lanish")}</a>
         </div>
       </div>
     </section>

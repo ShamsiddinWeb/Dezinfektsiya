@@ -33,7 +33,7 @@ const FAQ = (props) => {
   };
 
   return (
-    <div className="faq">
+    <div className="faq" id="faq">
       <div className="container">
         <h2 data-aos="fade-right" className="faq__title">ФАК</h2>
         {faqData.map((item, index) => (

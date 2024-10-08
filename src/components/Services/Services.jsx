@@ -44,7 +44,7 @@ const Services = (props) => {
     </li>
   ));
   return (
-    <section className="services">
+    <section className="services" id="Services">
       <div className="container">
         <div className="services__start">
           <h2 className="services__title" data-aos="fade-right">{props.t("xizmatlar")}</h2>

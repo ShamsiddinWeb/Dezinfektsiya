@@ -85,8 +85,8 @@ const About = (props) => {
   return (
     <section className="about" id="about">
       <div className="container">
-        <div className="about__start">
-          <h2 className="about__title"  data-aos="fade-right">{props.t("xaqimizda")}</h2>
+        <div className="about__start" >
+          <h2 className="about__title"   data-aos="fade-right">{props.t("xaqimizda")}</h2>
           <ul className="about__list"  >{aboutList}</ul>
         </div>
       </div>

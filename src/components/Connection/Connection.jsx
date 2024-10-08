@@ -42,8 +42,6 @@ const Connection = (props) => {
     setIsModalOpen(false);
   };
 
-
-
   const handleChange = (e) => {
     const value = e.target.value;
     if (/^\d*$/.test(value)) {
@@ -59,11 +57,15 @@ const Connection = (props) => {
   }, []);
 
   return (
-    <section className="connection">
+    <section className="connection" id="link">
       <div className="container">
         <div className="connection__start">
-          <form className="connection__form" onSubmit={handleSubmit}>
-            <h3 className="connection__form-title" data-aos="fade-right">
+          <form
+            className="connection__form"
+            onSubmit={handleSubmit}
+            data-aos="fade-right"
+          >
+            <h3 className="connection__form-title">
               {props.t("connection__title")}
             </h3>
             <input
@@ -72,18 +74,16 @@ const Connection = (props) => {
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-              data-aos="fade-right"
             />
             <input
               type="number"
               placeholder="+998-94-033-72-12"
               value={tel}
-              onChange={ handleChange}
+              onChange={handleChange}
               required
-              data-aos="fade-right"
             />
 
-            <button className="connection__form-btn" data-aos="fade-right">
+            <button className="connection__form-btn">
               {props.t("connection__btn")}
             </button>
           </form>
