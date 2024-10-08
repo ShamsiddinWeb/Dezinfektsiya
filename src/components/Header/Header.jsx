@@ -48,18 +48,24 @@ function Header(props) {
           onClick={() => setToggle(!toogle)}
         ></div>
         <div className="header__start">
-          <Link to={"/"}>
+          <a href="/">
             <img
               className="header__icon"
               src={headerImg}
               alt="This is the logo"
               width={250}
             />
-          </Link>
+          </a>
           <div className="header__right">
             <div className="header__card">
               <ul className="header__list">{headerList}</ul>
-              <a href="#link" className="header__btn2"  onClick={() => setToggle(!toogle)}>{props.t("bog'lanish")}</a>
+              <a
+                href="#link"
+                className="header__btn2"
+                onClick={() => setToggle(!toogle)}
+              >
+                {props.t("bog'lanish")}
+              </a>
             </div>
             <select
               className="header__select"
@@ -83,7 +89,9 @@ function Header(props) {
                 <span className="header__menu-span"></span>
               </button>
             </div>
-            <a href="#link" className="header__btn">{props.t("bog'lanish")}</a>
+            <a href="#link" className="header__btn">
+              {props.t("bog'lanish")}
+            </a>
           </div>
         </div>
       </div>
