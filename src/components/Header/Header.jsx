@@ -48,7 +48,7 @@ function Header(props) {
           onClick={() => setToggle(!toogle)}
         ></div>
         <div className="header__start">
-          <a href="/">
+          <a href="#">
             <img
               className="header__icon"
               src={headerImg}
