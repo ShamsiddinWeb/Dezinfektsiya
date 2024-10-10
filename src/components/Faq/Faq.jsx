@@ -35,7 +35,7 @@ const FAQ = (props) => {
   return (
     <div className="faq" id="faq">
       <div className="container">
-        <h2 data-aos="fade-right" className="faq__title">ФАК</h2>
+        <h2 data-aos="fade-right" className="faq__title">{props.t("faq")}</h2>
         {faqData.map((item, index) => (
           <div data-aos="fade-right" className="faq__card" key={index}>
             <div className="faq__group" onClick={() => toggleAnswer(index)}>

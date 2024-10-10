@@ -10,6 +10,7 @@ import ServiceType from "./components/ServiceType/ServiceType";
 import Official from "./components/Official/Official";
 import Connection from "./components/Connection/Connection";
 import FAQ from "./components/Faq/Faq";
+import { FaPhoneAlt } from "react-icons/fa";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -31,6 +32,7 @@ function App() {
       <FAQ  t = {t}/>
       <Connection t = {t}/>
       <Footer t = {t}/>
+      <a className="tel" href="#link"><FaPhoneAlt /></a>
     </>
   );
 }
