@@ -1,42 +1,65 @@
-import React, { useEffect } from "react";
+import React from "react";
+// import heroimg from "../../assets/heroimg.png";
 import "./Hero.scss";
-import heroLeftImg from "../../assets/images/hero__left-img.png";
-import heroRightImg from "../../assets/images/hero__img.jpg";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+// import img1 from "../../assets/hero__img3.png";
+
+import "swiper/css";
 
 const Hero = (props) => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
-  }, []);
   return (
-    <section className="hero" id="main">
-      <div className="container">
-        <div className="hero__start ">
-          <div className="hero__left">
-            <h1 className="hero__left-title" data-aos="fade-right">{props.t("hero__title")}</h1>
-            <div className="hero__left-card">
-              <p className="hero__left-text" data-aos="fade-right">{props.t("hero__text")}</p>
-              <img
-                className="hero__left-img"
-                src={heroLeftImg}
-                alt=""
-                width={300}
-              />
+    <div className="hero">
+      <div className="max-container">
+        <Swiper
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          pagination={true}
+          modules={[Pagination, Autoplay]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <div className="hero__start1">
+              <div className="container">
+                <h1 className="hero__title">{props.t("hero__title1")}</h1>
+                <p className="hero__text">{props.t("hero__text1")}</p>
+                <a className="hero__btn" href="#form">{props.t("btn")}</a>
+              </div>
             </div>
-            <a href="#link" className="hero__left-btn">{props.t("bog'lanish")}</a>
-          </div>
-          <img
-            className="hero__right-img"
-            src={heroRightImg}
-            alt=""
-            width={750}
-          />
-        </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="hero__start2">
+              <div className="container">
+                <h1 className="hero__title">{props.t("hero__title2")}</h1>
+                <p className="hero__text">{props.t("hero__text2")}</p>
+                <a className="hero__btn" href="#form">{props.t("btn")}</a>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="hero__start3">
+              <div className="container hero__card">
+                <h1 className="hero__title">{props.t("hero__title3")}</h1>
+                <p className="hero__text">{props.t("hero__text3")}</p>
+                <a className="hero__btn" href="#form">{props.t("btn")}</a>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="hero__start4">
+              <div className="container">
+                <h1 className="hero__title">{props.t("hero__title4")}</h1>
+                <p className="hero__text">{props.t("hero__text4")}</p>
+                <a className="hero__btn" href="#form">{props.t("btn")}</a>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
-    </section>
+    </div>
   );
 };
 

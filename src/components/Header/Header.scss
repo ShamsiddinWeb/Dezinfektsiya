@@ -1,12 +1,14 @@
 .header {
-  padding-top: 20px;
+  padding-top: 10px;
   box-shadow: 0 0 15px #5e59592a;
   position: fixed;
   left: 0;top: 0;right: 0;
-  background-color: #fff;
-  padding-bottom: 20px;
-  padding-right: 40px;
+  background-color: #000;
+  padding-bottom: 10px;
+  // padding-right: 40px;
   z-index: 20;
+  opacity: 0.8;
+  transition: .2s linear;
   &__start {
     display: flex;
     justify-content: space-between;
@@ -28,22 +30,37 @@
     align-items: center;
     gap: 30px;
     &-link {
-      color: #00000098;
+      color: #ffffff98;
       font-size: 20px;
       font-weight: 300;
+      padding: 5px 8px;
     }
     &-link:hover {
-      color: black;
+      background-color: #fff;
+      border-radius: 10px;
+      color: #000;
     }
   }
   &__select {
-    color: #000000a6;
+    color: #ffffffa6;
     font-weight: 600;
     border-radius: 10px;
     font-size: 20px;
-    border: 2px solid #0000007a;
+    border: 2px solid #f7f7f77a;
     padding: 5px 7px;
     cursor: pointer;
+    background-color: #131313a6;
+  }
+  &__select1{
+    display: none;
+    color: #ffffffa6;
+    font-weight: 600;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 2px solid #f7f7f77a;
+    padding: 5px 7px;
+    cursor: pointer;
+    background-color: #131313a6;
   }
   &__active {
     position: fixed;
@@ -62,16 +79,20 @@
     color: #fff;
     border-radius: 25px;
     padding: 12px 30px;
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    flex-direction: column;
+    text-align: center;
+    p {
+      margin: 0;padding: 0;
+    }
   }
   &__btn2 {
     border: none;
-    background: linear-gradient(0deg, rgb(37, 33, 251) 0%, rgb(59, 105, 230) 100%);
     color: #fff;
     border-radius: 25px;
     padding: 12px 30px;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 20px;
     text-align: center;
     display: none;
@@ -99,7 +120,7 @@
   position: absolute;
   width: 20px;
   height: 2px;
-  background-color: blue;
+  background-color: rgb(255, 255, 255);
   left: 1px;
   transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
 }
@@ -148,7 +169,7 @@
 @media only screen and (max-width: 900px) {
   .header {
     &__icon {
-      width: 200px;
+      width: 70px;
     }
     &__right {
       gap: 20px;
@@ -170,36 +191,45 @@
 @media only screen and (max-width: 780px) {
   .header {
     &__icon {
-      width: 200px;
+      width: 70px;
     }
     &__right {
       gap: 20px;
     }
     &__card {
       position: fixed;
-      background-color: rgb(255, 255, 255);
-      right: -600px;top: 0;
+      background-color: rgb(0, 0, 0);
+      right: -800px;top: 0;
       flex-direction: column;
-      width: 50%;
+      width: 100%;
       transition: .3s;
       height: 100vh;
-      justify-content: start;
-      align-items: start;
-      padding-left: 30px;
+      // justify-content: start;
+      // align-items: start;
+      text-align: center;
+      // justify-content: space-around;
+      align-items: center;
+      margin: 0 auto; 
+      // padding-left: 30px;
       padding-top: 60px;
+      gap: 40px;
     }
     &__list {
       gap: 15px;
       flex-direction: column;
-      align-items: start;
-      justify-content: start;
-      gap: 30px;
+      justify-content: space-around;
+      gap: 40px;
       &-link {
         font-size: 20px;
       }
     }
     &__select {
       font-size: 18px;
+      display: none;
+    }
+    &__select1 {
+      font-size: 18px;
+      display: block;
     }
     &__btn {
       font-size: 18px;
@@ -208,10 +238,7 @@
     &__btn2 {
       font-size: 18px;
       display: block;
-      position: absolute;
-      bottom: 80px;
-      left: 0;
-      right: 0;
+      
     }
     &__menu-burgers {
       display: block;
@@ -229,12 +256,9 @@
 }   
 @media only screen and (max-width: 500px) {
   .header {
-    padding-top: 10px;
-    padding-bottom: 10px;
     padding-right: 10px;
-    &__card {
-      width: 70%;
-    }
+    padding-top:  0;
+    padding-bottom: 0;
     &__list {
       &-link {
         font-size: 16px;

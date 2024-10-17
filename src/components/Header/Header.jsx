@@ -18,13 +18,8 @@ function Header(props) {
     },
     {
       id: 3,
-      link: "#Services",
-      title: props.t("xizmatlar"),
-    },
-    {
-      id: 4,
-      link: "#faq",
-      title: props.t("faq"),
+      link: "#contacts",
+      title: props.t("bog'lanish"),
     },
   ];
   const headerList = data?.map((e) => (
@@ -53,18 +48,29 @@ function Header(props) {
               className="header__icon"
               src={headerImg}
               alt="This is the logo"
-              width={250}
+              width={80}
             />
           </a>
           <div className="header__right">
             <div className="header__card">
               <ul className="header__list">{headerList}</ul>
-              <a
+              <select
+              className="header__select header__select1"
+              name="Lng"
+              id="lng"
+              onChange={props.handleChange}
+              value={props.laungage}
+            >
+              <option value="uz">UZ</option>
+              <option value="ru">RU</option>
+              <option value="eng">ENG</option>
+            </select>
+            <a
                 href="#link"
                 className="header__btn2"
                 onClick={() => setToggle(!toogle)}
               >
-                {props.t("bog'lanish")}
+                <p>+998 94 033 72 12</p>
               </a>
             </div>
             <select
@@ -74,9 +80,9 @@ function Header(props) {
               onChange={props.handleChange}
               value={props.laungage}
             >
-              <option value="uz">Uzbek</option>
-              <option value="ru">Русский</option>
-              <option value="eng">English</option>
+              <option value="uz">UZ</option>
+              <option value="ru">RU</option>
+              <option value="eng">ENG</option>
             </select>
             <div className="header__menu-burgers">
               <button
@@ -89,7 +95,9 @@ function Header(props) {
                 <span className="header__menu-span"></span>
               </button>
             </div>
-            <a href="#link" className="header__btn">
+            <a href="tel:998940337212" className="header__btn">
+              <p>+998 94 033 72 12</p>
+
               {props.t("bog'lanish")}
             </a>
           </div>

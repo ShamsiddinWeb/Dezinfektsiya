@@ -1,0 +1,75 @@
+.scrolling-container {
+  position: relative;
+  width: 100%;
+  height:   80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2e0e1f;
+}
+
+.scrolling-text {
+  position: absolute;
+  font-size: 4em;
+  font-weight: bold;
+  opacity: 0.2;
+  color: #ffffff;
+}
+
+.left {
+  top: 15%;
+  left: -100%;
+  animation: scrollLeft 10s linear infinite;
+}
+
+.right {
+  bottom: 15%;
+  right: -100%;
+  animation: scrollRight 10s linear infinite;
+}
+
+.center-logo {
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+}
+
+@keyframes scrollLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .scrolling-container {
+    height: 60vh;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .scrolling-container {
+    height: 40vh;
+  }
+  .scrolling-text {
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .scrolling-container {
+    height: 40vh;
+  }
+  .scrolling-text {
+    font-size: 1,5em;
+  }
+}

@@ -1,0 +1,51 @@
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.mySwiper {
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 500px;
+  height: 100%;
+}
+.swiperComp__text {
+  display: -webkit-box; 
+  display: box; 
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+.swiperComp {
+  padding: 50px;
+  background-color: rgb(232, 74, 74);
+  border-radius: 20px;
+  text-align: center;
+}
+.swiperComp__img {
+  width: 200px;
+}
+@media only screen and (max-width: 700px) {
+  .swiper-slide {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .swiperComp__title{
+    font-size: 16px;
+  }
+  .swiperComp__text {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .swiper-slide {
+    width: 200px;
+  }
+}
