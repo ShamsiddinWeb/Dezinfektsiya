@@ -1,0 +1,122 @@
+.offical {
+  padding-right: 40px;
+  padding-top: 100px;
+  &__img {
+    border-radius: 20px;
+  }
+  &__start {
+    border-radius: 16px;
+    background: radial-gradient(
+      498.32% 130.33% at 92.87% 11.25%,
+      #33a9ff 0%,
+      #33fff3 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+  &__card {
+    &-title {
+      max-width: 643px;
+      color: #fafafa;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 48px;
+      margin-top: 12px;
+      margin-bottom: 50px;
+    }
+    &-btn {
+      border: none;
+      background: linear-gradient(
+        0deg,
+        rgb(37, 33, 251) 0%,
+        rgb(59, 105, 230) 100%
+      );
+      color: #fff;
+      border-radius: 25px;
+      padding: 12px 30px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    &-btn:hover {
+      opacity: 0.7;
+    }
+  }
+}
+@media only screen and (max-width: 1070px) {
+  .offical {
+    &__img {
+      border-radius: 20px;
+      width: 450px;
+    }
+    &__start {
+      gap: 20px;
+    }
+    &__card {
+      &-title {
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1070px) {
+  .offical {
+    &__img {
+      width: 350px;
+    }
+    &__card {
+      &-title {
+        font-size: 22px;
+      }
+      &-btn {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 740px) {
+  .offical {
+    &__img {
+      display: none;
+    }
+    &__card {
+      &-title {
+        font-size: 30px;
+      }
+      &-btn {
+        font-size: 18px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 440px) {
+  .offical {
+    &__card {
+      &-title {
+        font-size: 20px;
+      }
+      &-btn {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 335px) {
+  .offical {
+    &__card {
+      &-title {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      &-btn {
+        font-size: 14px;
+      }
+    }
+  }
+}

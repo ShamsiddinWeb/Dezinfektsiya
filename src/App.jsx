@@ -4,14 +4,13 @@ import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import { useTranslation } from "react-i18next";
 import About from "./components/About/About";
+import Clean from "./components/Clean/Clean";
 import Services from "./components/Services/Services";
-import SwiperComp from "./components/Swiper/Swiper";
-import TypeServices from "./components/TypeServices/TypeServices";
-import ScrollingText from "./components/ScrollingText/ScrollingText";
+import ServiceType from "./components/ServiceType/ServiceType";
+import Official from "./components/Official/Official";
 import Connection from "./components/Connection/Connection";
-// import AutoScrollCards from "./components/AutoScrollCards/AutoScrollCards";
-
-
+import FAQ from "./components/Faq/Faq";
+import { FaPhoneAlt } from "react-icons/fa";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -25,15 +24,17 @@ function App() {
     <>
       <Header laungage={laungage} handleChange={handleChange} t={t} />
       <Hero t= {t}/>
-      <About t= {t}/>
-      <Services t= {t}/>
-      <SwiperComp t= {t}/>
-      <TypeServices t= {t}/>
-      <ScrollingText t= {t}/>
-      {/* <AutoScrollCards t= {t}/> */}
-      <Connection t= {t}/>
-      <Footer t= {t}/>
+      <About t = {t}/>
+      <Clean t = {t}/>
+      <Services t = {t}/>
+      <ServiceType t = {t}/>
+      <Official t = {t}/>
+      <FAQ  t = {t}/>
+      <Connection t = {t}/>
+      <Footer t = {t}/>
+      <a className="tel" href="#link"><FaPhoneAlt /></a>
     </>
   );
 }
+
 export default App;
