@@ -2,7 +2,7 @@
   padding-right: 40px;
   padding-top: 100px;
   &__title {
-    color: #020c31;
+    color: #023107;
     width: 100%;
     padding-bottom: 40px;
     border-bottom: 1px solid #ccc;
@@ -13,16 +13,16 @@
     justify-content: space-between;
     gap: 30px;
     &-title {
-      color: #020c31;
+      color: #081b02;
       font-size: 25px;
     }
     &-icon {
       font-size: 80px;
-      color: blue;
+      color: rgb(1, 81, 11);
     }
     &-text {
       font-weight: 300;
-      color: #676d83;
+      color: #678372;
       font-size: 16px;
     }
   }

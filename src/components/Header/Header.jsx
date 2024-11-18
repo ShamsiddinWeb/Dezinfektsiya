@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import headerImg from "../../assets/icons/headerIcon.png";
-import { Link } from "react-router-dom";
 import "./Header.scss";
-import Hero from "../Hero/Hero";
 
 function Header(props) {
-  let data = [
+  const [toogle, setToggle] = useState(false);
+
+  const data = useMemo(() => [
     {
       id: 1,
       link: "#main",
@@ -26,8 +26,9 @@ function Header(props) {
       link: "#faq",
       title: props.t("faq"),
     },
-  ];
-  const headerList = data?.map((e) => (
+  ], [props.t]);
+
+  const headerList = data.map((e) => (
     <li
       key={e.id}
       onClick={() => setToggle(!toogle)}
@@ -39,57 +40,67 @@ function Header(props) {
     </li>
   ));
 
-  const [toogle, setToggle] = useState(false);
   return (
     <header className={`header ${toogle ? "open" : ""}`}>
       <div className="container">
         <div
-          class="header__active dark_div"
+          className="header__active dark_div"
           onClick={() => setToggle(!toogle)}
         ></div>
         <div className="header__start">
-          <a href="#">
+          <a href="#" aria-label="Navigate to homepage">
             <img
               className="header__icon"
               src={headerImg}
-              alt="This is the logo"
-              width={250}
+              alt="Company Logo"
+              width={200}
+              height={50}
+              loading="lazy"
             />
           </a>
           <div className="header__right">
             <div className="header__card">
               <ul className="header__list">{headerList}</ul>
               <a
-                href="#link"
+                onClick={() => setToggle(!toogle)} 
                 className="header__btn2"
-                onClick={() => setToggle(!toogle)}
+                aria-label="Contact button"
+                href="#link"
               >
                 {props.t("bog'lanish")}
               </a>
             </div>
-            <select
-              className="header__select"
-              name="Lng"
-              id="lng"
-              onChange={props.handleChange}
-              value={props.laungage}
-            >
-              <option value="uz">Uzbek</option>
-              <option value="ru">Русский</option>
-              <option value="eng">English</option>
-            </select>
+            <div>
+
+              <select
+                className="header__select"
+                name="Lng"
+                id="lng"
+                onChange={props.handleChange}
+                value={props.laungage}
+              >
+                <option value="uz">Uzbek</option>
+                <option value="ru">Русский</option>
+                <option value="eng">English</option>
+              </select>
+            </div>
             <div className="header__menu-burgers">
               <button
                 className="header__menu"
-                id="menu-burger"
                 onClick={() => setToggle(!toogle)}
+                aria-label="Toggle menu"
               >
                 <span className="header__menu-span"></span>
                 <span className="header__menu-span"></span>
                 <span className="header__menu-span"></span>
               </button>
             </div>
-            <a href="#link" className="header__btn">
+            <a 
+              onClick={() => setToggle(!toogle)} 
+              className="header__btn" 
+              aria-label="Contact button"
+              href="#link"
+            >
               {props.t("bog'lanish")}
             </a>
           </div>

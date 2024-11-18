@@ -36,6 +36,10 @@
       color: black;
     }
   }
+  &__icon {
+    padding: 0;
+    margin: 0;
+  }
   &__select {
     color: #000000a6;
     font-weight: 600;
@@ -58,7 +62,7 @@
   }
   &__btn {
     border: none;
-    background: linear-gradient(0deg, rgb(37, 33, 251) 0%, rgb(59, 105, 230) 100%);
+    background: linear-gradient(0deg, rgb(95, 128, 84) 0%, rgb(18, 143, 16) 100%);
     color: #fff;
     border-radius: 25px;
     padding: 12px 30px;
@@ -67,7 +71,7 @@
   }
   &__btn2 {
     border: none;
-    background: linear-gradient(0deg, rgb(37, 33, 251) 0%, rgb(59, 105, 230) 100%);
+    background: linear-gradient(0deg, rgb(122, 152, 122) 0%, rgb(18, 143, 16) 100%);
     color: #fff;
     border-radius: 25px;
     padding: 12px 30px;
@@ -99,7 +103,7 @@
   position: absolute;
   width: 20px;
   height: 2px;
-  background-color: blue;
+  background-color: rgb(18, 143, 16);
   left: 1px;
   transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
 }
@@ -126,7 +130,7 @@
   align-items: center;
   gap: 15px;
 }
-@media only screen and (max-width: 1055px) {
+@media only screen and (max-width: 1075px) {
   .header {
     &__right {
       gap: 30px;
@@ -145,7 +149,7 @@
     }
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 950px) {
   .header {
     &__icon {
       width: 200px;
@@ -167,7 +171,7 @@
     }
   }
 } 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 860px) {
   .header {
     &__icon {
       width: 200px;

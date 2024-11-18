@@ -1,0 +1,60 @@
+.telegram {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 22222;
+  border-radius: 50%;
+  background-color: transparent;
+   &__icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    svg {
+      background: linear-gradient(0deg, rgb(122, 152, 122) 0%, rgb(18, 143, 16) 100%);
+      color: #ffffff;
+      font-size: 40px;
+      padding: 10px;
+      border-radius: 50%;
+    }
+  }
+   &__ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgb(122, 152, 122) 0%, rgb(18, 143, 16) 100%);
+    z-index: -1;
+    animation: pulse 1.8s infinite ease-out;
+    box-shadow: 0 0 10px rgba(3, 120, 7, 0.7);
+  }
+  
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(6, 147, 34, 0.7); 
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+    background: radial-gradient(
+      rgba(0, 255, 123, 0.4),
+      rgba(0, 255, 123, 0)
+    );
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+    box-shadow: 0 0 20px rgba(0, 255, 123, 0.7); 
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .tel {
+    display: block;
+  }
+}

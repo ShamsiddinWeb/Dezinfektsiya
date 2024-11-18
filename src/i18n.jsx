@@ -1,29 +1,34 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import Backend from "i18next-http-backend";
-import laungageDetector from "i18next-browser-languagedetector";
+import LanguageDetector from "i18next-browser-languagedetector";
 import uzTranslation from "../public/locales/uz.json";
 import ruTranslation from "../public/locales/ru.json";
-import engTranslation from "../public/locales/eng.json"
+import engTranslation from "../public/locales/eng.json";
 
-const laungage = localStorage.getItem('i18nextLng') || "uz"
-i18n 
-.use(Backend)
-//tilni aniqlash
-.use(laungageDetector)
-// bog'lash
-.use(initReactI18next)
-.init(
-  {
-    fallbackLng : "uz",
-    lng: laungage,
-    debug:true,
-    resources: {
-      uz:{translation: uzTranslation},
-      ru:{translation: ruTranslation},
-      eng:{translation: engTranslation}
+const language = localStorage.getItem('i18nextLng') || "uz";
+
+i18n
+  .use(Backend) 
+  .use(LanguageDetector) 
+  .use(initReactI18next) 
+  .init(
+    {
+      fallbackLng: "uz", 
+      lng: language, 
+      debug: false, 
+      resources: {
+        uz: { translation: uzTranslation },
+        ru: { translation: ruTranslation },
+        eng: { translation: engTranslation },
+      },
+      interpolation: {
+        escapeValue: false, 
+      },
+      react: {
+        useSuspense: false, 
+      },
     }
-  }
-)
+  );
 
-export default i18n
+export default i18n;

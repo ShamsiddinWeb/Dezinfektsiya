@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import "./ServiceType.scss";
 import serviceImg1 from "../../assets/images/serviceImg1.jpg";
 import serviceImg2 from "../../assets/images/serviceImg2.jpg";
@@ -16,7 +16,8 @@ const ServiceType = (props) => {
       mirror: true,
     });
   }, []);
-  let data = [
+
+  const data = useMemo(() => [
     {
       id: 1,
       imges: serviceImg1,
@@ -47,23 +48,30 @@ const ServiceType = (props) => {
       title: props.t("serviceType__title5"),
       text: props.t("serviceType__text5"),
     },
-  ];
-  const serviceList = data?.map((e) => (
+  ], [props.t]);
+
+  const serviceList = data.map((e) => (
     <li key={e.id} className="serviceType__list-item" data-aos="fade-right">
       <h3 className="serviceType__list-title">{e.title}</h3>
       <p className="serviceType__list-text">{e.text}</p>
       <div className="serviceType__list-card">
         <a href="#link" className="serviceType__list-btn">{props.t("bog'lanish")}</a>
-        <img className="serviceType__list-img" src={e.imges} alt="" />
+        <img 
+          className="serviceType__list-img" 
+          src={e.imges} 
+          alt={e.title} 
+          loading="lazy" 
+        />
       </div>
     </li>
   ));
+
   return (
     <section className="serviceType">
       <div className="container">
         <div className="serviceType__start">
           <h2 className="serviceType__title" data-aos="fade-right">{props.t("serviceType")}</h2>
-          <ul className="serviceType__list" >{serviceList}</ul>
+          <ul className="serviceType__list">{serviceList}</ul>
         </div>
       </div>
     </section>
