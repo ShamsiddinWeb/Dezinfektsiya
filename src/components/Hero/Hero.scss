@@ -5,12 +5,13 @@
   &__start {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
   }
   &__left {
     &-title {
-      max-width: 650px;
-      font-size: 70px;
+      max-width: 750px;
+      font-size: 50px;
       min-height: 0;
       color: rgb(68, 168, 66);
       font-family: Unbounded, sans-serif;
