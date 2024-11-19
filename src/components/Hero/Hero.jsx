@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Hero.scss";
-import heroRightImg from "../../assets/images/hero__bg1.webp";
+import heroRightImg from "../../assets/images/image.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
