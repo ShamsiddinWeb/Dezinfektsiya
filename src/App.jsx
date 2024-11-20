@@ -10,11 +10,11 @@ import ServiceType from "./components/ServiceType/ServiceType";
 import Official from "./components/Official/Official";
 import Connection from "./components/Connection/Connection";
 import FAQ from "./components/Faq/Faq";
-import { FaPhoneAlt } from "react-icons/fa";
+import { PiTelegramLogoDuotone } from "react-icons/pi";
 
 function App() {
   const { t, i18n } = useTranslation();
-  const language = localStorage.getItem("i18nextLng") || "uz"; 
+  const language = localStorage.getItem("i18nextLng") || "uz";
   const handleChange = (event) => {
     const selectedLanguage = event.target.value;
     i18n.changeLanguage(selectedLanguage);
@@ -37,11 +37,11 @@ function App() {
         <a
           className="telegram__icon"
           href="https://t.me/Shamsiddin_69_75"
-          aria-label={t("telegram__link")} 
+          aria-label={t("telegram__link")}
           target="_blank"
-          rel="noopener noreferrer" 
+          rel="noopener noreferrer"
         >
-          <FaPhoneAlt />
+          <PiTelegramLogoDuotone />
           <div className="telegram__ring"></div>
         </a>
       </div>
